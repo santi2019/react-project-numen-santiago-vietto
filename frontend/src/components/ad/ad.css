@@ -1,0 +1,73 @@
+.adContainer{
+    align-items: center;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    height: 7vh;
+    justify-content: center;
+    padding: 0 40px;
+    position: fixed;
+    width: 100%;
+}
+
+.adText{
+    color: white;
+    flex-grow: 1;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.adCloseIcon{
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.adCloseIcon:hover {
+    color: #919191; 
+    transition: all 0.3s ease;
+}
+
+
+/******************************************************************************************************************/
+
+
+/********** MEDIA QUERY **********/
+
+/* TABLET */
+
+@media screen and (max-width: 1400px){
+    .adContainer{
+        gap:5px;
+        height: 6vh;
+        padding: 0 25px;
+    }
+
+    .adText{
+        font-size: 1.2rem;
+    }
+
+    .adCloseIcon{
+        font-size: 1.4rem;
+    }
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 768px){
+    .adContainer{
+        gap:5px;
+        height: 5vh;
+        padding: 0 15px;
+    }
+
+    .adText{
+        font-size: 0.75rem;
+    }
+
+    .adCloseIcon{
+        font-size: 0.95rem;
+    }
+} 
