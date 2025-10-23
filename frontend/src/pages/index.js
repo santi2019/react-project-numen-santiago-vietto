@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import Ad from "@/components/ad/Ad";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <link rel="icon" href="/adidas.ico" />
       </Head>
       <main>
+        <Ad/>
 
       </main>
     </>
