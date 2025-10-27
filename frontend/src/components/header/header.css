@@ -1,0 +1,108 @@
+.headerContainer{
+    height: 100vh;
+    width: 100%;
+    background-image: url("/adidasxoasiswallpaper.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding-left: 40px;
+    gap: 10px;
+}
+
+.headerContainer.withAd {
+    margin-top: 15vh;
+}
+
+.headerContainer h1,
+.headerContainer h3 {
+  background-color: white;
+  width: fit-content; 
+  padding: 0 6px;
+  font-family: "Noto Sans JP", sans-serif;  
+}
+
+.headerContainer h1{
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.headerContainer h3{
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+
+/******************************************************************************************************************/
+
+
+/********** MEDIA QUERY **********/
+
+/* TABLET */
+
+@media screen and (max-width: 1024px){
+    .headerContainer{
+        height: 60vh;
+        margin-top: 8vh;
+        padding-left: 25px;
+        gap: 8.5px;
+    }
+
+    .headerContainer.withAd {
+        margin-top: 12vh;
+        height: 60vh;
+    }
+
+    .headerContainer h1{
+        font-size: 1.5rem;
+    }
+
+    .headerContainer h3{
+    font-size: 0.85rem;
+    }
+}
+
+
+/* MOBILE */
+
+@media screen and (max-width: 769px){
+     .headerContainer{
+        height: 45vh;
+        margin-top: 6vh;
+        padding-left: 15px;
+        gap: 8px;
+    }
+
+    .headerContainer.withAd {
+        margin-top: 9.5vh;
+        height: 45vh;
+    }
+
+    .headerContainer h1{
+        font-size: 1rem;
+    }
+
+    .headerContainer h3{
+        font-size: 0.65rem;
+    }
+}
+
+
+@media screen and (max-width: 585px){
+     .headerContainer{
+        height: 35vh;
+        margin-top: 6vh;
+        padding-left: 15px;
+        gap: 8px;
+    }
+
+    .headerContainer.withAd {
+        margin-top: 9.5vh;
+        height: 35vh;
+    }
+}
+

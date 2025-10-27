@@ -9,7 +9,7 @@
     display: grid;
     gap: 55px;
     grid-template-columns: 1fr auto 1fr; 
-    height: 8vh;
+    height: 10vh;
     justify-content: center;
     left: 0;
     padding: 0 40px;
@@ -21,7 +21,7 @@
 }
 
 .navbarContainer.withAd {
-    margin-top: 5vh; 
+    margin-top: 5vh;
 }
 
 
@@ -88,7 +88,7 @@
 .navbarFunctions{
     align-items: center;
     display: flex;
-    gap: 30px;
+    gap: 20px;
     justify-self: end;
 }
 
@@ -151,12 +151,11 @@
 
 @media screen and (max-width: 1024px){
     .navbarContainer{
-        height: 6vh;
+        height: 8vh;
         padding: 0 25px;
     }
 
     .navbarContainer.withAd {
-        align-items: center;
         margin-top: 4vh; 
     }
 
@@ -165,7 +164,7 @@
     }
 
     .navbarFunctions{
-        gap: 20px;
+        gap: 15px;
     }
 
     .searchBarContainer{
@@ -229,9 +228,9 @@
 
 /* MOBILE */
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 769px){
     .navbarContainer{
-        height: 4.5vh;
+        height: 6vh;
         padding: 0 15px;
     }
 
