@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import Ad from "@/components/ad/Ad";
-import Navbar from "@/components/navbar/Navbar";
+import Ad from "@/components/header/ad/Ad";
+import Navbar from "@/components/header/navbar/Navbar";
 
 export default function Header() {
 

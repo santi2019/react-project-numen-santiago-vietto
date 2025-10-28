@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { ShoppingCartContext } from '@/context/ShoppingCartContextProvider'
 import Product from './product/Product';
+import ConfirmModal from './confirm_buy_modal/ConfirmBuyModal';
 
 const ShoppingCart = () => {
 
@@ -18,7 +19,8 @@ const ShoppingCart = () => {
                 { products.map((product) => (
                 <Product key={product.id} product={product} addToCart={addToCart}/>
                 ))}
-            </div>      
+            </div>
+            <ConfirmModal/>      
           </div>
     </>
   )

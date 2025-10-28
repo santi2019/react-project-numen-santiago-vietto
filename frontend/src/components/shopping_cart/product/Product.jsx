@@ -1,8 +1,10 @@
-import React from 'react'
+import React,  { useContext } from 'react'
+import { ShoppingCartContext } from '@/context/ShoppingCartContextProvider';
 
 const Product = ({product, addToCart}) => {
 
   const {price, size, name, image, id} = product;
+   const { openModal } = useContext(ShoppingCartContext);
 
   return (
     <div className="product">
@@ -16,7 +18,7 @@ const Product = ({product, addToCart}) => {
             <span>Only size: {size}</span>
         </div>
         <div className="productBtnContainer">
-          <button className="productBtn" onClick={() => addToCart(id)}>Buy</button>
+          <button className="productBtn" onClick={() => openModal(id)}>Buy</button>
         </div>
     </div>
   )

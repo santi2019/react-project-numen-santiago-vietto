@@ -1,4 +1,4 @@
-import { createContext, useReducer, useEffect } from "react";
+import { useState, createContext, useReducer, useEffect } from "react";
 import { shoppingInitialState } from "@/reducer/shoppingCartInitialState";
 import { shoppingReducer } from "@/reducer/shoppingCartReducer";
 import { TYPES } from "@/reducer/shoppingCartActions";
@@ -8,6 +8,9 @@ export const ShoppingCartContext = createContext();
 
 const ShoppingCardContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(shoppingReducer, shoppingInitialState);
+
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedProductId, setSelectedProductId] = useState(null);
 
   const readState = async () => {
     const ENDPOINTS = {
@@ -37,11 +40,38 @@ const ShoppingCardContextProvider = ({ children }) => {
     0
   );
 
+    // Se llama cuando el usuario toca "Buy"
+  const openModal = (productId) => {
+    setSelectedProductId(productId);
+    setModalOpen(true);
+  };
+
+  // Se llama cuando el usuario confirma en el modal
+  const confirmAdd = () => {
+    if (selectedProductId !== null) {
+      addToCart(selectedProductId);
+    }
+    // cerrar y limpiar selección
+    setModalOpen(false);
+    setSelectedProductId(null);
+  };
+
+  // Si en el futuro querés un botón "cancel", esto lo cerraría sin agregar
+  const closeModal = () => {
+    setModalOpen(false);
+    setSelectedProductId(null);
+  };
+
   const value = {
     state,
     readState,
     addToCart,
     totalItemsInCart,
+    modalOpen,
+    selectedProductId,
+    openModal,
+    confirmAdd,
+    closeModal
   };
 
   return (
