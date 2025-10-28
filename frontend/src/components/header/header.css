@@ -12,6 +12,7 @@
     align-items: start;
     padding-left: 40px;
     gap: 10px;
+    overflow-y: hidden;
 }
 
 .headerContainer.withAd {

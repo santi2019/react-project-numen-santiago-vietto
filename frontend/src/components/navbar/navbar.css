@@ -82,7 +82,6 @@
     width: 32px;
 }
 
-
 /* Funcionalidades del navbar: Barra de busqueda, e iconos de user y bag */
 
 .navbarFunctions{
@@ -139,7 +138,31 @@
 }
 
 
+.navbarCartWrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.navbarCartBadge {
+  position: absolute;
+  top: -12px;          
+  right: -8px;        
+  background-color: #538E76; 
+  opacity: 85%;
+  color: white;
+  font-size: 0.8rem;  
+  font-weight: 700;
+  border-radius: 50%;
+  min-width: 23px;
+  height: 23px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none; 
+}
 
 
 /******************************************************************************************************************/
@@ -175,6 +198,8 @@
     .navbarIcons{
         font-size: 1.35rem;
     }
+
+   
 
     .searchBar{
         color: black;
