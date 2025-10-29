@@ -28,7 +28,7 @@
 .productsContainer{
     height: auto;
     display: grid;
-    padding: 30px 0;
+    padding: 30px 0px;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 10px;
     row-gap: 30px;
