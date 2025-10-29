@@ -1,5 +1,4 @@
-/* Contenedor general */
-
+/*** Contenedor general ***/
 .navbarContainer{
     align-items: center;
     background-color: white;
@@ -25,15 +24,15 @@
 }
 
 
-/* Logo del navbar */
 
+/* Logo del navbar */
 .navbarLogo{
     cursor: pointer;
     width: 67px;
 }
 
-/* Menu de opciones del navbar */
 
+/* Menu de opciones del navbar */
 .navbarMenu{
     color: black;
     display: flex;
@@ -62,7 +61,6 @@
     font-weight: 600;
 }
 
-
 .navbarOpenBtn,
 .navbarCloseBtn {
     align-items: center;
@@ -82,8 +80,8 @@
     width: 32px;
 }
 
-/* Funcionalidades del navbar: Barra de busqueda, e iconos de user y bag */
 
+/* Funcionalidades del navbar: Barra de busqueda, e iconos de user y bag */
 .navbarFunctions{
     align-items: center;
     display: flex;
@@ -137,42 +135,43 @@
     font-weight: 150;
 }
 
-
-.navbarCartWrapper {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.navbarCartNumberContainer {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    position: relative;
 }
 
-.navbarCartBadge {
-  position: absolute;
-  top: -12px;          
-  right: -8px;        
-  background-color: #538E76; 
-  opacity: 85%;
-  color: white;
-  font-size: 0.8rem;  
-  font-weight: 700;
-  border-radius: 50%;
-  min-width: 23px;
-  height: 23px;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none; 
+.navbarCartNumber {
+    align-items: center;
+    background-color: #538E76; 
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    font-size: 0.8rem;  
+    font-weight: 700;
+    height: 23px;
+    justify-content: center;
+    min-width: 23px;
+    opacity: 85%;
+    padding: 0;
+    pointer-events: none; 
+    position: absolute;
+    right: -8px;        
+    top: -12px;  
 }
 
 
-/******************************************************************************************************************/
+/*---------------------------------------------------------------------------------------------------------------------------*/
 
 
-/********** MEDIA QUERY **********/
+/************** MEDIA QUERY **************/
 
-/* TABLET */
+/***** TABLET *****/
 
 @media screen and (max-width: 1024px){
+
+    /*** Contenedor general ***/
     .navbarContainer{
         height: 8vh;
         padding: 0 25px;
@@ -182,33 +181,30 @@
         margin-top: 4vh; 
     }
 
+
+    /* Logo del navbar */
     .navbarLogo{
         width: 60px;
     }
 
-    .navbarFunctions{
-        gap: 15px;
-    }
 
-    .searchBarContainer{
-        height: 34px;
-        width: 195px;
-    }
-
-    .navbarIcons{
-        font-size: 1.35rem;
-    }
-
-   
-
-    .searchBar{
-        color: black;
+    /* Menu de opciones del navbar */
+    .navbarMenu{
+        align-items: center;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        height: 100%;
         font-size: 0.95rem;
-        font-weight: 500;
-        letter-spacing: .00937em;
-        margin: 0;
-        padding: 0;
-        padding-right: 4px;
+        justify-content: center;
+        left: 0;
+        position: fixed;
+        top: 0;
+        transform: translateY(-100vh);
+        transition: 1s;
+        width: 100%;
+        z-index: 100000;
     }
 
     .navbarOpenBtn,
@@ -223,37 +219,59 @@
         justify-self: start;
     }
 
-    .navbarMenu{
-        align-items: center;
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        height: 100%;
-        justify-content: center;
-        left: 0;
-        position: fixed;
-        top: 0;
-        transform: translateY(-100vh);
-        transition: 1s;
-        width: 100%;
-    }
-
     .navbarResponsive{
         transform: none;
     }
 
     .navbarCloseBtn{
-        font-size: 1.35rem;
+        font-size: 1.25rem;
         position: absolute;
         right: 2rem;
         top: 2rem;
     }
+
+
+    /* Funcionalidades del navbar: Barra de busqueda, e iconos de user y bag */
+    .navbarFunctions{
+        gap: 15px;
+    }
+
+    .searchBarContainer{
+        height: 34px;
+        width: 195px;
+    }
+
+    .navbarIcons{
+        font-size: 1.35rem;
+    }
+
+    .searchBar{
+        color: black;
+        font-size: 0.95rem;
+        font-weight: 500;
+        letter-spacing: .00937em;
+        margin: 0;
+        padding: 0;
+        padding-right: 4px;
+    }
+
+    .navbarCartNumber {
+        font-size: 0.6rem;  
+        font-weight: 600;
+        height: 21px;
+        min-width: 21px;
+        right: -7px;        
+        top: -11px;  
+    }
 }
 
-/* MOBILE */
+
+
+/***** MOBILE *****/
 
 @media screen and (max-width: 769px){
+
+    /*** Contenedor general ***/
     .navbarContainer{
         height: 6vh;
         padding: 0 15px;
@@ -263,10 +281,19 @@
         margin-top: 3.5vh; 
     }
 
+
+    /* Logo del navbar */    
     .navbarLogo{
         width: 40px;
     }
 
+
+    /* Menu de opciones del navbar */
+    .navbarMenu{
+        font-size: 0.9rem;
+    }
+
+    /* Funcionalidades del navbar: Barra de busqueda, e iconos de user y bag */
     .searchBar {
         display: none;
     }
@@ -289,6 +316,11 @@
     .navbarCloseBtn,
     .navbarOpenBtn{
         font-size: 1rem;
+    }
+
+    .navbarCartNumber {  
+        height: 19px;      
+        min-width: 19px;
     }
 }
 

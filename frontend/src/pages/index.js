@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from "next/head";
 import Header from '@/components/header/Header';
-import ShoppingCart from '@/components/shopping_cart/ShoppingCart';
 import ShoppingCardContextProvider from '@/context/ShoppingCartContextProvider';
+import Main from '@/components/main/Main';
 
 export default function Home() {
 
@@ -21,7 +21,7 @@ export default function Home() {
       
       <ShoppingCardContextProvider>
         <Header/>
-        <ShoppingCart/>
+        <Main/>
       </ShoppingCardContextProvider>
 
      

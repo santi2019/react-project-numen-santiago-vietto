@@ -40,12 +40,12 @@ const Navbar = ({adVisible}) => {
                     className="navbarIcons"
                     icon={faUser}
                 />
-                <div className="navbarCartWrapper">
+                <div className="navbarCartNumberContainer">
                     <FontAwesomeIcon 
                         className="navbarIcons"
                         icon={faBagShopping} 
                     />
-                    <span className="navbarCartBadge">{totalItemsInCart}</span>
+                    <span className="navbarCartNumber">{totalItemsInCart}</span>
                 </div>
             </div>
         </nav>

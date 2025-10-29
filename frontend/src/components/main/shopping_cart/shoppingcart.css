@@ -1,3 +1,4 @@
+/*** Contenedor general ***/
 .cartContainer{
     width: 100%;
     display: flex;
@@ -5,6 +6,8 @@
     padding: 0px 40px;
 }
 
+
+/* Titulo del contenedor del carrito */
 .cartTitleContainer{
     display: flex;
     justify-content: center;
@@ -21,6 +24,7 @@
 }
 
 
+/* Contenedor GRID de los productos del carrito */
 .productsContainer{
     height: auto;
     display: grid;
@@ -30,28 +34,60 @@
     row-gap: 30px;
 }
 
-.cartProductsContainer{
-    height: 70vh;
-}
+
+/*---------------------------------------------------------------------------------------------------------------------------*/
 
 
+/************** MEDIA QUERY **************/
 
-
+/***** TABLET *****/
 
 @media screen and (max-width: 1024px){
+
+    /*** Contenedor general ***/
     .cartContainer{
         padding: 0 25px;
     }
+
+
+    /* Titulo del contenedor del carrito */
+    .cartTitleContainer{
+        height: 7.5vh;
+
+        & h2{
+            font-size: 1.3rem;
+        }
+    }
+
+
+    /* Contenedor GRID de los productos del carrito */
     .productsContainer {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 
+/***** MOBILE *****/
+
 @media screen and (max-width: 585px){
+
+    /*** Contenedor general ***/
     .cartContainer{
         padding: 0 15px;
     }
+
+
+    /* Titulo del contenedor del carrito */
+    .cartTitleContainer{
+        height: 5.5vh;
+
+        & h2{
+            font-size: 1rem;
+        }
+    }
+
+
+    /* Contenedor GRID de los productos del carrito */
     .productsContainer {
         grid-template-columns: repeat(1, 1fr);
     }

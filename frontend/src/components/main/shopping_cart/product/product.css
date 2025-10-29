@@ -1,0 +1,94 @@
+/*** Contenedor general ***/
+.product {
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+/* Imagen del producto */
+.productImgContainer{
+    & img {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+
+/* Contenedor del contenido del producto */
+.productContent{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    font-family: "Kanit", sans-serif;
+    gap: 10px;
+
+    & h3{ 
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    & h4{ 
+        font-size: 0.9rem;
+        font-weight: 300;
+    }
+
+    & span{
+        color: #767677; 
+        font-size: 0.85rem;
+        font-weight: 300;
+    }
+    
+}
+
+
+/* Boton de compra */
+.productBtnContainer{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.buyBtn{
+    background-color: transparent;
+    border: 1px solid #111A2A;
+    border-radius: 4px;
+    color: black;
+    cursor: pointer;
+    font-family: "Kanit", sans-serif;
+    font-size: 0.9rem;
+    font-style: none;
+    font-weight: 300;
+    padding: 10px 50px;
+    transition: background-color 0.5s ease;
+}
+
+.buyBtn:hover{
+    background-color: #111A2A;
+    color: white;
+    transition: background-color 0.5s ease;
+}
+
+
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+
+/************** MEDIA QUERY **************/
+
+/***** TABLET *****/
+
+@media screen and (max-width: 1024px){
+}
+
+
+/***** MOBILE *****/
+
+@media screen and (max-width: 769px){
+
+}

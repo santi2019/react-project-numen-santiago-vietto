@@ -12,13 +12,13 @@ const Product = ({product, addToCart}) => {
           <img src={image} alt=""/>
         </div>
         <div className="productContent">
+            <h3>£{price}</h3>
             <h4>{name}</h4>
-            <h5>£{price}</h5>
             <span>Original</span>
-            <span>Only size: {size}</span>
+            <h4>Only size: {size}</h4>
         </div>
         <div className="productBtnContainer">
-          <button className="productBtn" onClick={() => openModal(id)}>Buy</button>
+          <button className="buyBtn" onClick={() => openModal(id)}>Buy</button>
         </div>
     </div>
   )
