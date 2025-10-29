@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from "next/head";
-import Ad from "@/components/ad/Ad";
-import Navbar from "@/components/navbar/Navbar";
 import Header from '@/components/header/Header';
+import ShoppingCardContextProvider from '@/context/ShoppingCartContextProvider';
+import Main from '@/components/main/Main';
 
 export default function Home() {
 
-    const [adVisible, setAdVisible] = useState(true);
   
   return (
     <>
@@ -20,15 +19,12 @@ export default function Home() {
         <link rel="icon" href="/adidasLogo.ico" />
       </Head>
       
-      {adVisible && <Ad onClose={() => setAdVisible(false)} />}
-      <Navbar adVisible={adVisible} />
-      <Header adVisible={adVisible} />
+      <ShoppingCardContextProvider>
+        <Header/>
+        <Main/>
+      </ShoppingCardContextProvider>
 
      
-      <main>
-
-          
-      </main>
     </>
   );
 }

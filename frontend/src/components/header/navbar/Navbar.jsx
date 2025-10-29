@@ -1,7 +1,8 @@
-import React, { useRef } from 'react'
+import React, { useRef, useContext } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBagShopping, faMagnifyingGlass, faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
+import { ShoppingCartContext } from '@/context/ShoppingCartContextProvider';
 
 const Navbar = ({adVisible}) => {
 
@@ -10,6 +11,8 @@ const Navbar = ({adVisible}) => {
     const showNavbar = () => {
         navRef.current.classList.toggle("navbarResponsive")
     }
+
+    const { totalItemsInCart } = useContext(ShoppingCartContext);
 
   return (
     <>
@@ -37,10 +40,13 @@ const Navbar = ({adVisible}) => {
                     className="navbarIcons"
                     icon={faUser}
                 />
-                <FontAwesomeIcon 
-                    className="navbarIcons"
-                    icon={faBagShopping} 
-                />
+                <div className="navbarCartNumberContainer">
+                    <FontAwesomeIcon 
+                        className="navbarIcons"
+                        icon={faBagShopping} 
+                    />
+                    <span className="navbarCartNumber">{totalItemsInCart}</span>
+                </div>
             </div>
         </nav>
     </>

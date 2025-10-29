@@ -1,23 +1,27 @@
+/*** Contenedor general ***/
 .headerContainer{
-    height: 100vh;
-    width: 100%;
+    align-items: start;
     background-image: url("/adidasxoasiswallpaper.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
-    margin-top: 10vh;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    padding-left: 40px;
     gap: 10px;
+    height: 100vh;
+    justify-content: center;
+    margin-top: 10vh;
+    overflow-x: hidden;
+    padding-left: 40px;
+    width: 100%;
 }
 
 .headerContainer.withAd {
     margin-top: 15vh;
 }
 
+
+/* Titulo y subtitulo del sitio */
 .headerContainer h1,
 .headerContainer h3 {
   background-color: white;
@@ -37,14 +41,16 @@
 }
 
 
-/******************************************************************************************************************/
+/*---------------------------------------------------------------------------------------------------------------------------*/
 
 
-/********** MEDIA QUERY **********/
+/************** MEDIA QUERY **************/
 
-/* TABLET */
+/***** TABLET *****/
 
 @media screen and (max-width: 1024px){
+
+    /*** Contenedor general ***/
     .headerContainer{
         height: 60vh;
         margin-top: 8vh;
@@ -54,23 +60,26 @@
 
     .headerContainer.withAd {
         margin-top: 12vh;
-        height: 60vh;
     }
 
+
+    /* Titulo y subtitulo del sitio */
     .headerContainer h1{
         font-size: 1.5rem;
     }
 
     .headerContainer h3{
-    font-size: 0.85rem;
+        font-size: 0.85rem;
     }
 }
 
 
-/* MOBILE */
+/***** MOBILE *****/
 
 @media screen and (max-width: 769px){
-     .headerContainer{
+
+    /*** Contenedor general ***/
+    .headerContainer{
         height: 45vh;
         margin-top: 6vh;
         padding-left: 15px;
@@ -78,10 +87,12 @@
     }
 
     .headerContainer.withAd {
-        margin-top: 9.5vh;
         height: 45vh;
+        margin-top: 9.5vh;
     }
 
+
+    /* Titulo y subtitulo del sitio */
     .headerContainer h1{
         font-size: 1rem;
     }
@@ -93,7 +104,9 @@
 
 
 @media screen and (max-width: 585px){
-     .headerContainer{
+
+    /*** Contenedor general ***/
+    .headerContainer{
         height: 35vh;
         margin-top: 6vh;
         padding-left: 15px;

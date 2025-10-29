@@ -1,0 +1,94 @@
+/*** Contenedor general ***/
+.cartContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 40px;
+}
+
+
+/* Titulo del contenedor del carrito */
+.cartTitleContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    border-bottom: 1px solid #D3D7DA;
+
+    & h2{
+        font-family: "Kanit", sans-serif;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+    }
+}
+
+
+/* Contenedor GRID de los productos del carrito */
+.productsContainer{
+    height: auto;
+    display: grid;
+    padding: 30px 0px;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+    row-gap: 30px;
+}
+
+
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+
+/************** MEDIA QUERY **************/
+
+/***** TABLET *****/
+
+@media screen and (max-width: 1024px){
+
+    /*** Contenedor general ***/
+    .cartContainer{
+        padding: 0 25px;
+    }
+
+
+    /* Titulo del contenedor del carrito */
+    .cartTitleContainer{
+        height: 7.5vh;
+
+        & h2{
+            font-size: 1.3rem;
+        }
+    }
+
+
+    /* Contenedor GRID de los productos del carrito */
+    .productsContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/***** MOBILE *****/
+
+@media screen and (max-width: 585px){
+
+    /*** Contenedor general ***/
+    .cartContainer{
+        padding: 0 15px;
+    }
+
+
+    /* Titulo del contenedor del carrito */
+    .cartTitleContainer{
+        height: 5.5vh;
+
+        & h2{
+            font-size: 1rem;
+        }
+    }
+
+
+    /* Contenedor GRID de los productos del carrito */
+    .productsContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

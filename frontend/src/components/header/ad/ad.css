@@ -1,12 +1,11 @@
-/* Contenedor general del Ad */
-
+/*** Contenedor general ***/
 .adContainer {
     align-items: center;
     background-color: black;
     box-sizing: border-box;
     display: flex;
     gap: 10px;
-    height: 5vh;             /* altura fija del banner */
+    height: 5vh;            
     justify-content: center;
     left: 0;
     padding: 0 40px;
@@ -15,8 +14,8 @@
     width: 100%;
 }
 
-/* Texto del Ad */
 
+/* Texto del Ad */
 .adText{
     color: white;
     flex-grow: 1;
@@ -25,8 +24,8 @@
     text-align: center;
 }
 
-/* Icono de cierre del Ad */
 
+/* Icono de cierre del Ad */
 .adCloseIcon{
     color: white;
     cursor: pointer;
@@ -40,42 +39,52 @@
 }
 
 
-/******************************************************************************************************************/
+/*---------------------------------------------------------------------------------------------------------------------------*/
 
 
-/********** MEDIA QUERY **********/
+/************** MEDIA QUERY **************/
 
-/* TABLET */
+/***** TABLET *****/
 
 @media screen and (max-width: 1024px){
+
+    /*** Contenedor general ***/
     .adContainer{
         gap:5px;
         height: 4vh;
         padding: 0 25px;
     }
 
+    /* Texto del Ad */
     .adText{
         font-size: 0.75rem;
     }
 
+    /* Icono de cierre del Ad */
     .adCloseIcon{
         font-size: 0.8rem;
     }
 }
 
-/* MOBILE */
+
+
+/***** MOBILE *****/
 
 @media screen and (max-width: 767px){
+
+    /*** Contenedor general ***/
     .adContainer{
         gap:5px;
         height: 3.5vh;
         padding: 0 15px;
     }
 
+    /* Texto del Ad */
     .adText{
         font-size: 0.65rem;
     }
 
+    /* Icono de cierre del Ad */
     .adCloseIcon{
         font-size: 0.7rem;
     }
