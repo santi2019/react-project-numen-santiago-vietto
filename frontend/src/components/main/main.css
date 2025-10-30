@@ -1,0 +1,199 @@
+/*** Contenedor general ***/
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 150px;
+    gap: 40px;
+}
+
+
+/* Imagen de ropa */
+.mainClotheImg{
+    padding-top: 40px;
+    box-sizing: border-box;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+/* Contenedor del texto y el video */
+.mainVideoTextContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 40px;
+  align-items: center; 
+  justify-content: space-between;
+}
+
+/* Contenedor del texto */
+.mainTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  text-align: justify;
+}
+
+.mainTextContainer h2 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.mainTextContainer p {
+  font-family: "Kanit", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* Contenedor del video */
+.mainVideoContainer {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.mainVideo {
+  width: 100%;
+  height: 100%;
+  border: none;
+  box-sizing: border-box;
+}
+
+
+/* Contenedor de la frase */
+.mainOasisQuoteContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 60vh;
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+
+    & h3{
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+
+    & h4{
+        font-size: 1rem;
+        font-weight: 400;
+    }
+}
+
+
+/* Imagen de oasis|adidas */
+.mainOasisImg{
+    box-sizing: border-box;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+
+/************** MEDIA QUERY **************/
+
+/***** TABLET *****/
+
+@media (max-width: 1024px) {
+
+    /*** Contenedor general ***/
+    .mainContainer{
+        gap: 30px;
+        padding: 0 120px;
+    }
+
+
+    /* Contenedor del texto y el video */
+    .mainVideoTextContainer {
+        grid-template-columns: repeat(1, 1fr); 
+    }
+
+
+    /* Contenedor del texto */
+    .mainTextContainer {
+        border-bottom: 1px solid #d3d7da;
+        padding-bottom: 30px;
+        gap: 20px;
+    }
+
+    .mainTextContainer h2 {
+        font-size: 1.3rem;
+    }
+
+    .mainTextContainer p {
+        font-size: 1rem;
+    }
+
+
+    /* Contenedor de la frase */
+    .mainOasisQuoteContainer{
+        height: 50vh;
+        gap: 8px;
+
+        & h3{
+            font-size: 1.1rem;
+        }
+
+        & h4{
+            font-size: 0.9rem;
+        }
+    }  
+}
+
+
+@media (max-width: 585px) {
+
+    /*** Contenedor general ***/
+    .mainContainer{
+        gap: 15px;
+        padding: 0 45px;
+    }
+
+    /* Imagen de ropa */
+    .mainClotheImg{
+        padding-top: 15px;
+    }
+
+
+    /* Contenedor del texto y el video */
+    .mainVideoTextContainer {
+        grid-template-columns: repeat(1, 1fr); 
+        gap: 15px;
+    }
+
+
+    /* Contenedor del texto */
+    .mainTextContainer {
+        gap: 10px;
+        padding-bottom: 15px;
+    }
+
+    .mainTextContainer h2 {
+        font-size: 1rem;
+    }
+
+    .mainTextContainer p {
+        font-size: 0.8rem;
+    }
+
+
+    /* Contenedor de la frase */
+    .mainOasisQuoteContainer{
+        height: 40vh;
+        gap: 6px;
+
+        & h3{
+            font-size: 1rem;
+        }
+
+        & h4{
+            font-size: 0.8rem;
+        }
+    }  
+}
