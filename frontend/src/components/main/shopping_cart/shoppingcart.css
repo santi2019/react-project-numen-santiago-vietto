@@ -3,7 +3,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 0px 40px;
+    padding: 0px 150px;
 }
 
 
@@ -46,7 +46,7 @@
 
     /*** Contenedor general ***/
     .cartContainer{
-        padding: 0 25px;
+        padding: 0 120px;
     }
 
 
@@ -73,7 +73,7 @@
 
     /*** Contenedor general ***/
     .cartContainer{
-        padding: 0 15px;
+        padding: 0 45px;
     }
 
 
@@ -90,5 +90,6 @@
     /* Contenedor GRID de los productos del carrito */
     .productsContainer {
         grid-template-columns: repeat(1, 1fr);
+        padding: 20px 0;
     }
 }
