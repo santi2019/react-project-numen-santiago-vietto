@@ -1,5 +1,6 @@
 import React from 'react'
 import ShoppingCart from './shopping_cart/ShoppingCart'
+import Carousel from './carousel/Carousel'
 
 const Main = () => {
   return (
@@ -37,7 +38,7 @@ const Main = () => {
           </div>
           <img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_1920,w_1920/ADIDAS_ORIGINALS_X_OASIS_CITATION_STATEMENT_DESKTOP_2880x1240_ae8a3df236.jpg" alt="" className="mainOasisImg"/>
         </div>
-         {/* CARRUSEL */}
+        <Carousel/>
     </>
   )
 }
