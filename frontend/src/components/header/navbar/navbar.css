@@ -1,0 +1,327 @@
+/*** Contenedor general ***/
+.navbarContainer{
+    align-items: center;
+    background-color: white;
+    border-bottom: 1px solid #D3D7DA;
+    box-shadow: 0px 10px 10px -6px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    display: grid;
+    gap: 55px;
+    grid-template-columns: 1fr auto 1fr; 
+    height: 10vh;
+    justify-content: center;
+    left: 0;
+    padding: 0 40px;
+    position: fixed;
+    top: 0;
+    transition: margin-top 0.3s ease;
+    width: 100%;
+    z-index: 900;
+}
+
+.navbarContainer.withAd {
+    margin-top: 5vh;
+}
+
+
+
+/* Logo del navbar */
+.navbarLogo{
+    cursor: pointer;
+    width: 67px;
+}
+
+
+/* Menu de opciones del navbar */
+.navbarMenu{
+    color: black;
+    display: flex;
+    font-family: "Kanit", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 350;
+    gap: 40px;
+    justify-self: center; 
+    list-style: none;
+}
+
+.navbarMenu li {
+  border-bottom: 2px solid transparent; 
+  cursor: pointer;
+  padding-bottom: 4px; 
+  position: relative;
+  transition: border-color 0.3s ease;
+}
+
+.navbarMenu li:hover {
+  border-bottom: 2px solid black; 
+}
+
+.menuItemBold{
+    font-weight: 600;
+}
+
+.navbarOpenBtn,
+.navbarCloseBtn {
+    align-items: center;
+    background: transparent;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    display: none;        
+    font-size: 1.45rem;
+    height: 32px;
+    justify-content: center;
+    line-height: 0;
+    opacity: 0;
+    outline: none;
+    padding: 0;
+    visibility: hidden;
+    width: 32px;
+}
+
+
+/* Funcionalidades del navbar: Barra de busqueda, e iconos de user y bag */
+.navbarFunctions{
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    justify-self: end;
+}
+
+.searchBarContainer{
+    align-items: center;
+    background-color: #E9ECEF;
+    border: 2px solid transparent;
+    display: flex;
+    flex-direction: row;
+    height: 38px;
+    padding: 0 10px;
+    transition: border-color 0.2s ease;
+    width: 215px;
+}
+
+.searchBarContainer:focus-within{
+    border: 2px solid #6D7280;
+    border-radius: 4px;
+}
+
+.searchBar{
+    background-color: #E9ECEF;
+    border: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: .00937em;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    padding-right: 4px;
+    width: 100%;
+}
+
+.searchBar:hover .searchBar {
+    color: #000000;
+}
+
+.searchBar:focus{
+    color: #000000;
+}
+
+.navbarIcons{
+    color: #44464b;
+    cursor: pointer;
+    font-size: 1.65rem;
+    font-weight: 150;
+}
+
+.navbarCartNumberContainer {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    position: relative;
+}
+
+.navbarCartNumber {
+    align-items: center;
+    background-color: #538E76; 
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    font-size: 0.8rem;  
+    font-weight: 700;
+    height: 23px;
+    justify-content: center;
+    min-width: 23px;
+    opacity: 85%;
+    padding: 0;
+    pointer-events: none; 
+    position: absolute;
+    right: -8px;        
+    top: -12px;  
+}
+
+
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+
+/************** MEDIA QUERY **************/
+
+/***** TABLET *****/
+
+@media screen and (max-width: 1024px){
+
+    /*** Contenedor general ***/
+    .navbarContainer{
+        height: 8vh;
+        padding: 0 25px;
+    }
+
+    .navbarContainer.withAd {
+        margin-top: 4vh; 
+    }
+
+
+    /* Logo del navbar */
+    .navbarLogo{
+        width: 60px;
+    }
+
+
+    /* Menu de opciones del navbar */
+    .navbarMenu{
+        align-items: center;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        height: 100%;
+        font-size: 0.95rem;
+        justify-content: center;
+        left: 0;
+        position: fixed;
+        top: 0;
+        transform: translateY(-100vh);
+        transition: 1s;
+        width: 100%;
+        z-index: 100000;
+    }
+
+    .navbarOpenBtn,
+    .navbarCloseBtn {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .navbarOpenBtn{
+        font-size: 1.35rem;
+        justify-self: start;
+    }
+
+    .navbarResponsive{
+        transform: none;
+    }
+
+    .navbarCloseBtn{
+        font-size: 1.25rem;
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
+    }
+
+
+    /* Funcionalidades del navbar: Barra de busqueda, e iconos de user y bag */
+    .navbarFunctions{
+        gap: 15px;
+    }
+
+    .searchBarContainer{
+        height: 34px;
+        width: 195px;
+    }
+
+    .navbarIcons{
+        font-size: 1.35rem;
+    }
+
+    .searchBar{
+        color: black;
+        font-size: 0.95rem;
+        font-weight: 500;
+        letter-spacing: .00937em;
+        margin: 0;
+        padding: 0;
+        padding-right: 4px;
+    }
+
+    .navbarCartNumber {
+        font-size: 0.6rem;  
+        font-weight: 600;
+        height: 21px;
+        min-width: 21px;
+        right: -7px;        
+        top: -11px;  
+    }
+}
+
+
+
+/***** MOBILE *****/
+
+@media screen and (max-width: 769px){
+
+    /*** Contenedor general ***/
+    .navbarContainer{
+        height: 6vh;
+        padding: 0 15px;
+    }
+
+    .navbarContainer.withAd {
+        margin-top: 3.5vh; 
+    }
+
+
+    /* Logo del navbar */    
+    .navbarLogo{
+        width: 40px;
+    }
+
+
+    /* Menu de opciones del navbar */
+    .navbarMenu{
+        font-size: 0.9rem;
+    }
+
+    /* Funcionalidades del navbar: Barra de busqueda, e iconos de user y bag */
+    .searchBar {
+        display: none;
+    }
+
+    .searchBarContainer {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        width: auto;
+    }
+
+    .navbarIcons {
+        font-size: 1rem; 
+    }
+
+    .navbarIcons{
+        font-size: 1rem;
+    }
+
+    .navbarCloseBtn,
+    .navbarOpenBtn{
+        font-size: 1rem;
+    }
+
+    .navbarCartNumber {  
+        height: 19px;      
+        min-width: 19px;
+    }
+}
+
+
