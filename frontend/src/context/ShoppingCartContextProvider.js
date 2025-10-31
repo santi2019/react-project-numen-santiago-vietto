@@ -34,29 +34,26 @@ const ShoppingCardContextProvider = ({ children }) => {
   const addToCart = (id) =>
     dispatch({ type: TYPES.ADD_TO_CART, payload: id });
 
-  // contador total: suma las quantities
+  
   const totalItemsInCart = state.cart.reduce(
     (acc, item) => acc + item.quantity,
     0
   );
 
-    // Se llama cuando el usuario toca "Buy"
   const openModal = (productId) => {
     setSelectedProductId(productId);
     setModalOpen(true);
   };
 
-  // Se llama cuando el usuario confirma en el modal
   const confirmAdd = () => {
     if (selectedProductId !== null) {
       addToCart(selectedProductId);
     }
-    // cerrar y limpiar selección
+    
     setModalOpen(false);
     setSelectedProductId(null);
   };
 
-  // Si en el futuro querés un botón "cancel", esto lo cerraría sin agregar
   const closeModal = () => {
     setModalOpen(false);
     setSelectedProductId(null);
