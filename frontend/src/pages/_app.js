@@ -10,6 +10,7 @@ import "@/components/main/carousel/carousel.css";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import "@/components/footer/footer.css";
 
 export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />;
