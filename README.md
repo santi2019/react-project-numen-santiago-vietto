@@ -30,6 +30,24 @@ json-server
 react-dom
 ```
 
+## Servicios
+
+**Frontend**
+
+Terminal 1:
+
+```bash
+npm run dev
+```
+
+**Server**
+
+Terminal 2:
+
+```bash
+npm run server
+```
+
 ## Resultados
 
 ### Requerimientos Técnicos:
