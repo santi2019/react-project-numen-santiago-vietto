@@ -39,14 +39,14 @@ const CartModal = () => {
         <div className="cartModalFooter">
           <div className="cartTotalLine">
             <span>Total</span>
-            <strong>£{cartTotal}</strong>
+            <span>£{cartTotal}</span>
           </div>
           <div className="cartModalButtons">
             <button className="confirmBtn" onClick={clearCart} disabled={!cart.length}>
-              Limpiar Carrito
+              Clean Cart
             </button>
             <button className="cancelBtn" onClick={closeCartModal}>
-              Cerrar
+              Close
             </button>
           </div>
         </div>

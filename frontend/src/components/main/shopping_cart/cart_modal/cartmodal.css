@@ -58,6 +58,10 @@
 /* Footer */
 .cartModalFooter {
   margin-top: 16px;
+
+  & span{
+    font-weight: 600;
+  }
 }
 
 .cartTotalLine {
