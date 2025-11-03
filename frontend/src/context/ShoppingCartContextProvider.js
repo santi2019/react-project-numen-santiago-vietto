@@ -33,18 +33,55 @@ const ShoppingCardContextProvider = ({ children }) => {
     readState();
   }, []);
 
-  const addToCart = (id) => dispatch({ type: TYPES.ADD_TO_CART, payload: id });
+  const addToCart = async (id) => {
+    const product = state.products.find((p) => p.id === id);
 
+    if (!product) return;
 
-  const deleteFromCart = (id, all = false) => {
-    if (all){
-      dispatch({type: TYPES.REMOVE_ALL_ITEMS, payload: id});
-    }else{
-      dispatch({type: TYPES.REMOVE_ONE_ITEM, payload: id});
+    const itemInCart = state.cart.find((item) => item.id === id);
+
+    if (itemInCart) {
+      const updatedItem = { ...itemInCart, quantity: itemInCart.quantity + 1 };
+
+      await axios.put(`http://localhost:5000/cart/${id}`, updatedItem);
+    } else {
+      const newItem = { ...product, quantity: 1 };
+
+      await axios.post("http://localhost:5000/cart", newItem, {
+        headers: { "Content-Type": "application/json" },
+      });
     }
-  }
 
-  const clearCart = () => dispatch({type: TYPES.CLEAR_CART});
+    readState();
+  };
+
+
+
+  const deleteFromCart = async (id, all = false) => {
+    const item = state.cart.find((item) => item.id === id);
+    if (!item) return;
+
+    if (all || item.quantity === 1) {
+      await axios.delete(`http://localhost:5000/cart/${id}`);
+    } else {
+      const updatedItem = { ...item, quantity: item.quantity - 1 };
+
+      await axios.put(`http://localhost:5000/cart/${id}`, updatedItem, {
+        headers: { "content-type": "application/json" },
+      });
+    }
+
+    readState();
+  };
+
+
+  const clearCart = async () => {
+    for (const item of state.cart) {
+      await axios.delete(`http://localhost:5000/cart/${item.id}`);
+    }
+
+    readState();
+  };
 
   
   const totalItemsInCart = state.cart.reduce(
