@@ -12,8 +12,8 @@ const CartItem = ({ item }) => {
         <h5>$ {price} x {quantity} = {price * quantity}</h5>
       </div>
       <div className="cart-item-actions">
-        <button className="confirmBtn" onClick={() => deleteFromCart(id)}>Eliminar uno</button>
-        <button className="cancelBtn" onClick={() => deleteFromCart(id, true)}>Eliminar todos</button>
+        <button className="confirmBtn" onClick={() => deleteFromCart(id)}>Remove One</button>
+        <button className="cancelBtn" onClick={() => deleteFromCart(id, true)}>Remove All</button>
       </div>
     </div>
   )
