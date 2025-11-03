@@ -57,14 +57,5 @@
       "price": 45
     }
   ],
-  "cart": [
-    {
-      "id": "8",
-      "image": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/321416d7a8184f418ea615f63dc1f37b_9366/TOUR_3-STRIPES_T-Shirt_Black_KT3445_01_laydown.jpg",
-      "name": "TOUR 3-STRIPES T-Shirt Black",
-      "size": "M",
-      "price": 45,
-      "quantity": 1
-    }
-  ]
+  "cart": []
 }
