@@ -12,7 +12,7 @@ const Navbar = ({adVisible}) => {
         navRef.current.classList.toggle("navbarResponsive")
     }
 
-    const { totalItemsInCart } = useContext(ShoppingCartContext);
+    const { totalItemsInCart, openCartModal } = useContext(ShoppingCartContext);
 
   return (
     <>
@@ -40,7 +40,7 @@ const Navbar = ({adVisible}) => {
                     className="navbarIcons"
                     icon={faUser}
                 />
-                <div className="navbarCartNumberContainer">
+                <div className="navbarCartNumberContainer" onClick={openCartModal}>
                     <FontAwesomeIcon 
                         className="navbarIcons"
                         icon={faBagShopping} 

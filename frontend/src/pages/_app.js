@@ -6,6 +6,8 @@ import "@/components/main/main.css";
 import "@/components/main/shopping_cart/shoppingcart.css";
 import "@/components/main/shopping_cart/product/product.css";
 import "@/components/main/shopping_cart/confirm_buy_modal/confirmbuymodal.css"
+import "@/components/main/shopping_cart/cart_modal/cartmodal.css"
+import "@/components/main/shopping_cart/cart_modal/cart_item/cartitem.css"
 import "@/components/main/carousel/carousel.css";
 import 'swiper/css';
 import 'swiper/css/navigation';

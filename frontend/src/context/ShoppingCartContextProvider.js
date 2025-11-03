@@ -12,6 +12,8 @@ const ShoppingCardContextProvider = ({ children }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedProductId, setSelectedProductId] = useState(null);
 
+  const [cartModalOpen, setCartModalOpen] = useState(false);
+
   const readState = async () => {
     const ENDPOINTS = {
       products: "http://localhost:5000/products",
@@ -31,14 +33,29 @@ const ShoppingCardContextProvider = ({ children }) => {
     readState();
   }, []);
 
-  const addToCart = (id) =>
-    dispatch({ type: TYPES.ADD_TO_CART, payload: id });
+  const addToCart = (id) => dispatch({ type: TYPES.ADD_TO_CART, payload: id });
+
+
+  const deleteFromCart = (id, all = false) => {
+    if (all){
+      dispatch({type: TYPES.REMOVE_ALL_ITEMS, payload: id});
+    }else{
+      dispatch({type: TYPES.REMOVE_ONE_ITEM, payload: id});
+    }
+  }
+
+  const clearCart = () => dispatch({type: TYPES.CLEAR_CART});
 
   
   const totalItemsInCart = state.cart.reduce(
     (acc, item) => acc + item.quantity,
     0
   );
+
+
+const cartTotal = state.cart.length > 0
+  ? state.cart.reduce((acc, item) => acc + (item.price * item.quantity), 0)
+  : 0;
 
   const openModal = (productId) => {
     setSelectedProductId(productId);
@@ -59,16 +76,27 @@ const ShoppingCardContextProvider = ({ children }) => {
     setSelectedProductId(null);
   };
 
+  const openCartModal = () => setCartModalOpen(true);
+  const closeCartModal = () => setCartModalOpen(false);
+  const toggleCartModal = () => setCartModalOpen(prev => !prev);
+
   const value = {
     state,
     readState,
     addToCart,
+    deleteFromCart,
+    clearCart,
+    cartTotal,
     totalItemsInCart,
     modalOpen,
     selectedProductId,
     openModal,
     confirmAdd,
-    closeModal
+    closeModal,
+    cartModalOpen,
+    openCartModal,
+    closeCartModal,
+    toggleCartModal,
   };
 
   return (

@@ -1,13 +1,61 @@
 {
-    "products": [
-        {"id": 1, "image": "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/b51c7c6152564aa8bff74621ee19c858_9366/TOUR_JACQUARD_JERSEY_Blue_KT3436_01_laydown.jpg", "name": "TOUR JACQUARD JERSEY", "size": "M", "price": 85},
-        {"id": 2, "image": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/2ebbc68d5aaa4a3ba13a36b772ae6219_9366/TOUR_ADIDAS_ORIGINALS_OVERSIZED_CREW_Sweatshirt_Blue_KT3453_01_laydown.jpg", "name": "TOUR OVERSIZED CREW", "size": "L", "price": 70},
-        {"id": 3, "image": "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/a648a33042064242a76d728a160fe57d_9366/TOUR_3-STRIPES_LONGSLEEVE_TEE_Black_KT3428_02_laydown.jpg", "name": "TOUR 3-STRIPES LONGSLEEVE TEE", "size": "S", "price": 55},
-        {"id": 4, "image": "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/3ec02821fd994aba9e121f5512904394_9366/TOUR_COACH_JACKET_Beige_HZ0878_01_laydown.jpg", "name": "TOUR COACH JACKET", "size": "L", "price": 100},
-        {"id": 5, "image": "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/6f82d035cbb64a4eb1f752f6620cc526_9366/TOUR_3-STRIPES_T-Shirt_White_KT3446_01_laydown.jpg", "name": "TOUR 3-STRIPES T-Shirt", "size": "M", "price": 45},
-        {"id": 6, "image": "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/661631305d824f9bacb12c921f1441a7_9366/TOUR_BUCKET_HAT_Brown_KK9154_02_standard.jpg", "name": "TOUR BUCKET HAT", "size": "S", "price": 40},
-        {"id": 7, "image": "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/3931ae3d96e541ee98d7d1bc8bfd8ce1_9366/TOUR_3-STRIPES_LONGSLEEVE_TEE_Blue_KT3427_01_laydown.jpg", "name": "TOUR 3-STRIPES LONGSLEEVE TEE", "size": "L", "price": 55},
-        {"id": 8, "image": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/321416d7a8184f418ea615f63dc1f37b_9366/TOUR_3-STRIPES_T-Shirt_Black_KT3445_01_laydown.jpg", "name": "TOUR 3-STRIPES T-Shirt Black", "size": "M", "price": 45}
-    ],
-    "cart": []
+  "products": [
+    {
+      "id": "1",
+      "image": "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/b51c7c6152564aa8bff74621ee19c858_9366/TOUR_JACQUARD_JERSEY_Blue_KT3436_01_laydown.jpg",
+      "name": "TOUR JACQUARD JERSEY",
+      "size": "M",
+      "price": 85
+    },
+    {
+      "id": "2",
+      "image": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/2ebbc68d5aaa4a3ba13a36b772ae6219_9366/TOUR_ADIDAS_ORIGINALS_OVERSIZED_CREW_Sweatshirt_Blue_KT3453_01_laydown.jpg",
+      "name": "TOUR OVERSIZED CREW",
+      "size": "L",
+      "price": 70
+    },
+    {
+      "id": "3",
+      "image": "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/a648a33042064242a76d728a160fe57d_9366/TOUR_3-STRIPES_LONGSLEEVE_TEE_Black_KT3428_02_laydown.jpg",
+      "name": "TOUR 3-STRIPES LONGSLEEVE TEE",
+      "size": "S",
+      "price": 55
+    },
+    {
+      "id": "4",
+      "image": "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/3ec02821fd994aba9e121f5512904394_9366/TOUR_COACH_JACKET_Beige_HZ0878_01_laydown.jpg",
+      "name": "TOUR COACH JACKET",
+      "size": "L",
+      "price": 100
+    },
+    {
+      "id": "5",
+      "image": "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/6f82d035cbb64a4eb1f752f6620cc526_9366/TOUR_3-STRIPES_T-Shirt_White_KT3446_01_laydown.jpg",
+      "name": "TOUR 3-STRIPES T-Shirt",
+      "size": "M",
+      "price": 45
+    },
+    {
+      "id": "6",
+      "image": "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/661631305d824f9bacb12c921f1441a7_9366/TOUR_BUCKET_HAT_Brown_KK9154_02_standard.jpg",
+      "name": "TOUR BUCKET HAT",
+      "size": "S",
+      "price": 40
+    },
+    {
+      "id": "7",
+      "image": "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/3931ae3d96e541ee98d7d1bc8bfd8ce1_9366/TOUR_3-STRIPES_LONGSLEEVE_TEE_Blue_KT3427_01_laydown.jpg",
+      "name": "TOUR 3-STRIPES LONGSLEEVE TEE",
+      "size": "L",
+      "price": 55
+    },
+    {
+      "id": "8",
+      "image": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/321416d7a8184f418ea615f63dc1f37b_9366/TOUR_3-STRIPES_T-Shirt_Black_KT3445_01_laydown.jpg",
+      "name": "TOUR 3-STRIPES T-Shirt Black",
+      "size": "M",
+      "price": 45
+    }
+  ],
+  "cart": []
 }
